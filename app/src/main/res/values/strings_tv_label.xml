@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_label_not_data">not data</string>
+
+    <string name="tv_label_structure_fragment">Shops</string>
+    <string name="tv_label_fragment_edit_products">Fragment edit products</string>
+    <string name="tv_label_products_fragment">products fragment</string>
+    <string name="tv_label_workers_fragment">workers fragment</string>
+    <string name="tv_label_fragment_edit_workers">Fragment edit workers</string>
+    <string name="tv_label_nameEnterprise">name</string>
+    <string name="tv_label_innEnterprise">INN</string>
+    <string name="tv_label_emailEnterprise">e-mail</string>
+    <string name="tv_label_idEnterprise">id</string>
+
+    <string name="label_tv_item_list_view" translatable="false">tv_item_list_view</string>
+    <string name="tv_label_non_manufacture">Non manufacture</string>
+    <string name="tv_label_shop">shop:</string>
+    <string name="tv_label_one_more_shop">combines shop:</string>
+    <string name="tv_label_id">ID:</string>
+    <string name="tv_label____">___</string>
+    <string name="tv_label_product_name">product name</string>
+    <string name="tv_label_unit_of_measure">unit of measure</string>
+    <string name="tv_label_workshop">workshop</string>
+    <string name="tv_label_accuracy">accuracy</string>
+    <string name="tv_label_vsd_support">vsd support</string>
+    <string name="tv_label_type">type of shop</string>
+    <string name="tv_label_count_product">count product:</string>
+    <string name="tv_label_record_is_inactive">record is inactive</string>
+
+    <string name="tv_label_workers_for_report_for_day">workers list</string>
+    <string name="tvLabel_firstDate">from</string>
+    <string name="tvLabel_byDay">by</string>
+    <string name="tvLabel_lastDate">to</string>
+
+    <string name="tvLabel_current_date" translatable="false">текущ.дата</string>
+    <string name="tvLabel_sum_product_count">total:</string>
+    <string name="tvLabel_count_days_produced">days:</string>
+    <string name="tvLabel_num_records_viewing">count:</string>
+    <string name="tvLabel_num_days_viewing">count days:</string>
+    <string name="tvLabel_view_VSD_isDone">done:</string>
+
+    <string name="tvLabel_label_product">s/fin product</string>
+    <string name="tvLabel_label_count">Count</string>
+    <string name="tvLabel_label_time_produce">hour</string>
+    <string name="tvLabel_label_countOfBatches">batches</string>
+    <string name="tvLabel_label_countOfDays">days</string>
+    <string name="tvLabel_label_name_user">worker</string>
+    <string name="tvLabelDateProduced">date</string>
+    <string name="tvLabelProductName">product</string>
+    <string name="tvLabelCount">count</string>
+    <string name="tvLabelTimeProduce">time</string>
+
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.setting.StructureSetting_fragment"
+    android:gravity="center"
+    >
+    <Button android:id="@+id/btn_struct_enterprise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/button"
+        android:text="@string/btn_label_enterprise"
+        />
+    <Button android:id="@+id/btn_struct_shops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/button"
+        android:text="@string/btn_label_shops"
+        />
+    <Button android:id="@+id/btnBack_struct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_label_back"
+        style="@style/button"
+        />
+</LinearLayout>

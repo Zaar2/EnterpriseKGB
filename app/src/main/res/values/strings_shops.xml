@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nameShop_meat">Meat shop</string>
+    <string name="nameShop_cold">Cold shop</string>
+    <string name="nameShop_hot">Hot shop</string>
+    <string-array name="shops_arr">
+        <item>@string/nameShop_meat</item>
+        <item>@string/nameShop_cold</item>
+    </string-array>
+</resources>

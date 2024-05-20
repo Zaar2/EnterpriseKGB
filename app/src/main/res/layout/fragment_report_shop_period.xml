@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.shop.PeriodReportShopFragment">
+
+    <TextView
+        android:id="@+id/tv_reportShopPeriod_title"
+        style="@style/subItem_mainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/periodReport"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:scaleType="fitXY"
+        android:src="@drawable/uploading"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_reportShopPeriod_title"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_workers_for_report"
+        style="@style/tv_reference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tv_label_workers_for_report_for_day"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reportShopPeriod_title" />
+
+    <LinearLayout
+        android:id="@+id/linLayout_firstDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/linLayout_lastDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_workers_for_report">
+
+        <TextView
+            android:id="@+id/tv_firstDate_label"
+            style="@style/textView_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/tvLabel_firstDate"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_firstDate_value"
+            style="@style/textView_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/tvLabel_current_date"
+            android:visibility="visible"
+            android:background="?android:attr/selectableItemBackground"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linLayout_lastDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linLayout_firstDate"
+        app:layout_constraintTop_toTopOf="@+id/linLayout_firstDate">
+
+        <TextView
+            android:id="@+id/tv_lastDate_label"
+            style="@style/textView_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/tvLabel_lastDate"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_lastDate_value"
+            style="@style/textView_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvLabel_current_date"
+            android:visibility="visible"
+            android:background="?android:attr/selectableItemBackground"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_sum_indicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/layout_num_days"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linLayout_firstDate">
+
+        <TextView
+            android:id="@+id/tv_label1_numRecords"
+            style="@style/textView_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvLabel_num_records_viewing" />
+
+        <TextView
+            android:id="@+id/tv_value1_numRecords"
+            style="@style/textView_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_______" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_num_days"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layout_sum_indicators"
+        app:layout_constraintTop_toBottomOf="@+id/linLayout_firstDate"
+        android:gravity="end"
+        android:paddingHorizontal="@dimen/size_padding_top_recView"
+        >
+
+        <TextView
+            android:id="@+id/tv_label_numDays"
+            style="@style/textView_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvLabel_num_days_viewing" />
+
+        <TextView
+            android:id="@+id/tv_value_numDays"
+            style="@style/textView_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_______" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/progressBar_repShop"
+        layout="@layout/layout_progress_bar_retrieving_records"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/layout_buttons_bottomOfActivityShops"
+        app:layout_constraintTop_toBottomOf="@+id/layout_sum_indicators" />
+    <include
+        android:id="@+id/layout_report_shop"
+        layout="@layout/layout_report_for_shop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/layout_buttons_bottomOfActivityShops"
+        app:layout_constraintTop_toBottomOf="@+id/layout_sum_indicators" />
+
+    <LinearLayout
+        android:id="@+id/layout_buttons_bottomOfActivityShops"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_btn_group"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_getReportFor_period"
+            style="@style/buttonMaterial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_padding_top"
+            android:text="@string/btn_label_getReport_forPeriod"
+            android:visibility="visible"
+            tools:ignore="VisualLintButtonSize" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

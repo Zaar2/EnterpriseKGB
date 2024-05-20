@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@+id/tv_itemRecView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    style="@style/textView_labelActivity"
+    android:text="@string/label_tv_item_list_view"
+    android:clickable="false"
+    android:background="?android:attr/selectableItemBackground"
+    >
+</TextView>

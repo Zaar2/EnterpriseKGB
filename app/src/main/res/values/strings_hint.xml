@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_name_shop">name shop</string>
+    <string name="hint_short_name_shop">short name</string>
+    <string name="hint_et_full_name_worker">full name worker</string>
+    <string name="hint_et_short_name_worker">short name worker</string>
+    <string name="hint_et_workshop_worker">workshop worker</string>
+    <string name="hint_et_appointment_worker">appointment worker</string>
+    <string name="hint_et_oneMoreAppointment_worker">one more appointment worker</string>
+    <string name="hint_et_login_worker">login worker</string>
+    <string name="hint_et_password">password</string>
+
+    <string name="et_identification_hint_id">id of enterprise</string>
+    <string name="et_identification_hint_login">user login</string>
+    <string name="et_identification_hint_password">user password</string>
+    <string name="et_hint_id_generate">generate id</string>
+</resources>

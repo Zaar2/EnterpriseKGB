@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.setting.EditWorkers_fragment"
+    android:gravity="center"
+    >
+    <LinearLayout android:id="@+id/layoutGroup_workersData_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RelativeLayout android:id="@+id/layout_inactiveWorker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/size_padding_top"
+            android:paddingHorizontal="@dimen/size_padding_horizontal_fragment"
+            android:visibility="invisible"
+            >
+            <TextView android:id="@+id/tvLabel_inactiveWorker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textView_smallText"
+                android:text="@string/tv_label_record_is_inactive"
+                android:layout_toStartOf="@+id/checkB_inactiveWorker"
+                android:layout_alignTop="@+id/checkB_inactiveWorker"
+                />
+            <CheckBox android:id="@+id/checkB_inactiveWorker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/checkBox"
+                android:layout_alignParentEnd="true"
+                />
+        </RelativeLayout>
+        <EditText android:id="@+id/et_fullNameWorker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textView_value"
+            android:maxLines="1"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:hint="@string/hint_et_full_name_worker"
+            android:autofillHints="name"
+            />
+        <EditText android:id="@+id/et_shortNameWorker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textView_value"
+            android:maxLines="1"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:hint="@string/hint_et_short_name_worker"
+            android:autofillHints="name"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="true"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textView_label"
+                android:text="@string/tv_label_shop"
+                android:gravity="center_vertical"
+                />
+            <Spinner android:id="@+id/spinner_shopForEditUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                style="@style/spinner"
+                />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout_one_more_workshop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="true"
+            android:gravity="center_vertical"
+            android:visibility="invisible"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textView_label"
+                android:text="@string/tv_label_one_more_shop"
+                android:gravity="center_vertical"
+                />
+            <Spinner android:id="@+id/spinner_oneMoreShopForEditUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                style="@style/spinner"
+                />
+        </LinearLayout>
+        <EditText android:id="@+id/et_appointmentWorker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textView_value"
+            android:maxLines="1"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:hint="@string/hint_et_appointment_worker"
+            />
+        <EditText android:id="@+id/et_usrLoginWorker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textView_value"
+            android:maxLines="1"
+            android:inputType="textEmailSubject"
+            android:imeOptions="actionNext"
+            android:hint="@string/hint_et_login_worker"
+            android:autofillHints="username"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:hintEnabled="false"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_usrPassWorker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/textView_value"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                android:hint="@string/hint_et_password"
+                android:autofillHints="password"
+                android:background="@color/transparent"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <include android:id="@+id/btnGroup_workersEdit"
+            layout="@layout/btn_group_edit"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <include android:id="@+id/btnGroup_workerAdd"
+            layout="@layout/btn_group_add"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    <TextView android:id="@+id/tv_alertMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_layout_alert"
+        android:layout_marginEnd="@dimen/margin_layout_alert"
+        style="@style/textView_alertMessage"
+        />
+</LinearLayout>

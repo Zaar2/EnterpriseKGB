@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="id" translatable="false">id</string>
+    <string name="fullName_user" translatable="false">fullName</string>
+    <string name="shortName_user" translatable="false">shortName</string>
+    <string name="workshop" translatable="false">shop</string>
+    <string name="appointment_user" translatable="false">appointment</string>
+    <string name="login_user" translatable="false">login</string>
+    <string name="pass_user" translatable="false">pass</string>
+    <string name="one_more_workshop" translatable="false">oneMoreWorkshop</string>
+    <string-array name="userElements_key">
+        <item>@string/fullName_user</item>
+        <item>@string/shortName_user</item>
+        <item>@string/workshop</item>
+        <item>@string/appointment_user</item>
+        <item>@string/login_user</item>
+        <item>@string/pass_user</item>
+        <item>@string/one_more_workshop</item>
+    </string-array>
+
+    <string name="productName_product" translatable="false">product_name</string>
+    <string name="vsd_support_product" translatable="false">vsd_support</string>
+    <string name="me_product" translatable="false">me</string>
+    <string name="accuracy_product" translatable="false">accuracy</string>
+    <string name="idStatus_product" translatable="false">id_status</string>
+    <string-array name="productElements_key">
+        <item>@string/productName_product</item>
+        <item>@string/vsd_support_product</item>
+        <item>@string/me_product</item>
+        <item>@string/workshop</item>
+        <item>@string/accuracy_product</item>
+    </string-array>
+
+    <string name="id_workshop_product" translatable="false">id_workshop</string>
+</resources>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.reports.SearchActivity"
+    android:gravity="center"
+    android:background="@drawable/background"
+    >
+    <LinearLayout android:id="@+id/layout_buttons_top_OfActivitySearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:id="@+id/btn_cancel_search"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_label_reset"
+            />
+    </LinearLayout>
+    <!--        name of product-->
+    <LinearLayout android:id="@+id/layout_nameProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_buttons_top_OfActivitySearch"
+        android:layout_marginTop="@dimen/size_padding_top"
+        >
+
+        <TextView
+            style="@style/textView_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="@string/tvLabel_label_product"
+            android:visibility="gone"/>
+
+        <Spinner
+            android:id="@+id/spinner_product"
+            style="@style/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="80"
+            android:gravity="end"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/layout_date_range_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintTop_toBottomOf="@+id/layout_nameProduct">
+
+        <LinearLayout
+            android:id="@+id/linLayout_firstDate_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/firstDate_label_search"
+                style="@style/textView_label"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/tvLabel_firstDate" />
+
+            <TextView
+                android:id="@+id/firstDate_value_search"
+                style="@style/textView_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/tvLabel_current_date"
+                android:background="?android:attr/selectableItemBackground"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linLayout_lastDate_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lastDate_label_search"
+                style="@style/textView_label"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/tvLabel_lastDate" />
+
+            <TextView
+                android:id="@+id/lastDate_value_search"
+                style="@style/textView_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvLabel_current_date"
+                android:background="?android:attr/selectableItemBackground"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/layout_sum_indicators_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintTop_toBottomOf="@+id/layout_date_range_search"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/label1_numRecords_search"
+                style="@style/textView_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvLabel_label_countOfBatches" />
+
+            <TextView android:id="@+id/tv_numRecords_search"
+                style="@style/textView_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_______" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/tv_sum_product_count_label"
+                style="@style/textView_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvLabel_sum_product_count" />
+
+            <TextView android:id="@+id/tv_sum_product_count_value"
+                style="@style/textView_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_______" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+
+            <TextView android:id="@+id/tv_countDaysProduced_label"
+                style="@style/textView_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvLabel_count_days_produced" />
+
+            <TextView android:id="@+id/tv_countDaysProduced_value"
+                style="@style/textView_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_______" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_of_data_search"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/layout_buttons_bottomOfActivitySearch"
+        app:layout_constraintTop_toBottomOf="@+id/layout_sum_indicators_search">
+
+        <LinearLayout
+            android:id="@+id/linear_reportViews_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/layout_progressBar_search"
+                layout="@layout/layout_progress_bar_retrieving_records"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/layout_search"
+                layout="@layout/layout_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_buttons_bottomOfActivitySearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btn_getReportFor_search_search"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_padding_top"
+            android:text="@string/btn_label_search"
+            android:visibility="visible" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

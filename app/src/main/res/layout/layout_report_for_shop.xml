@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ViewStub android:id="@+id/stub_reportForPeriod"
+        android:inflatedId="@+id/label_forListView_reportForPeriod"
+        android:layout="@layout/item_list_view_report_for_period"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <ViewStub android:id="@+id/stub_reportForDay"
+        android:inflatedId="@+id/label_forListView_reportForDay"
+        android:layout="@layout/item_list_view_report_for_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recView_reportShop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:scrollbars="vertical"
+        android:paddingHorizontal="@dimen/size_padding_left"
+        />
+</LinearLayout>

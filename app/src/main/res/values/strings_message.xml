@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_identification_start_explanation">If you have a registration data, input data to the appropriate fields and press button - \"OK\"\n
+        </string>
+
+    <string name="alert_contains_space">contains a space, this field must not contains spaces</string>
+    <string name="alert_nonShops_fromUsers">* The current enterprise has not created any workshops.
+        In order to enter data about a new employee, you need to create at least one workshop.</string>
+    <string name="tvMessage_addEnterprise_save_variables">The enterprise is registered on the server
+        and saved locally in the database.
+        \n* Please save the \'id\' in the another place.
+    \nThis \'id\' will also be visible in the \'SETTING\' section, \'STRUCTURE/ENTERPRISE\' subsection.
+    </string>
+    <string name="enter_identification_description_process_receivedID">received sessionID\n</string>
+    <string name="enter_identification_description_process_receivedID_not">!!not received sessionID\n</string>
+    <string name="enter_identification_description_process_received_cryptoID">received enterprise ID\n</string>
+    <string name="enter_identification_description_process_sessionID_true">sessionID, identification - OK\n</string>
+    <string name="enter_identification_description_process_sessionID_existsFalse">!!sessionID, exists - false or is expired\n</string>
+    <string name="enter_identification_description_process_sessionID_existsTrue">!!sessionID, exists - OK\n</string>
+    <string name="enter_identification_description_process_sessionID_false">!!sessionID, identification - false\n</string>
+    <string name="enter_identification_description_process_sessionID_verifFalse">!!sessionID, verification - false, check registration data\n</string>
+    <string name="enter_identification_description_process_sessionID_verifFail">!!sessionID, verification - fail\n</string>
+    <string name="enter_identification_description_process_received_enterpriseData">enterprise data is received\n</string>
+    <string name="enter_identification_description_process_received_shopsData">shops data is received\n</string>
+    <string name="enter_identification_description_process_received_workersData">workers data is received\n</string>
+    <string name="enter_identification_description_process_received_productsData">products data is received\n</string>
+    <string name="enter_identification_description_process_received_productsData_zeroRows">!!received 0 product records\n</string>
+    <string name="enter_identification_description_process_received_rolesData">roles data is received\n</string>
+    <string name="enter_identification_description_process_savePreference_OK">login and password for entry in app is save\n</string>
+    <string name="enter_identification_description_process_savePreference_false">registration data is missing in the local database or does not match\n</string>
+    <string name="enter_identification_description_process_errServ_900">error while retrieving data from database on server, check registration data\n</string>
+
+
+</resources>

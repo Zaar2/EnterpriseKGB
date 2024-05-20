@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".view.fragments.setting.EditProducts_fragment"
+    >
+    <RelativeLayout android:id="@+id/layout_titleProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/layoutGroup_productData_edit"
+        android:paddingHorizontal="@dimen/size_padding_horizontal_fragment"
+        >
+        <TextView android:id="@+id/tvLabel_idProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_label_id"
+            style="@style/textView_smallText"
+            android:layout_toStartOf="@+id/tv_idProduct"
+            />
+        <TextView android:id="@+id/tv_idProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textView_smallText"
+            android:text="@string/tv_label____"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView android:id="@+id/tvLabel_inactiveProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textView_smallText"
+            android:text="@string/tv_label_record_is_inactive"
+            android:textAlignment="viewEnd"
+            android:layout_toStartOf="@+id/checkB_inactiveProduct"
+            android:layout_alignTop="@+id/checkB_inactiveProduct"
+            android:visibility="invisible"
+            />
+        <CheckBox android:id="@+id/checkB_inactiveProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/checkBox"
+            android:layout_alignRight="@+id/tv_idProduct"
+            android:layout_below="@+id/tv_idProduct"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+
+    <LinearLayout android:id="@+id/layoutGroup_productData_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/layout_titleProduct"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="@dimen/size_padding_horizontal_fragment"
+        >
+        <EditText android:id="@+id/et_productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textView_value"
+            android:maxLines="1"
+            android:inputType="textPersonName"
+            android:imeOptions="actionNext"
+            android:hint="@string/tv_label_product_name"
+            android:autofillHints="name"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:gravity="start"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textView_label"
+                android:text="@string/tv_label_unit_of_measure"
+                />
+            <EditText android:id="@+id/et_meProduct"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/textView_value"
+                android:maxLines="1"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:autofillHints="name"
+                android:textAlignment="viewStart"
+                android:layout_weight="30"
+                />
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="true"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textView_label"
+                android:text="@string/tv_label_workshop"
+                />
+            <Spinner android:id="@+id/spinner_shopForEditProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                style="@style/spinner"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textView_label"
+                android:text="@string/tv_label_accuracy"
+                />
+            <EditText android:id="@+id/et_accuracy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/textView_value"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionNext"
+                android:autofillHints="creditCardNumber"
+                android:textAlignment="viewStart"
+                android:layout_weight="4"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/size_padding_top"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textView_value"
+                android:text="@string/tv_label_vsd_support"
+                android:textAlignment="viewEnd"
+                />
+            <CheckBox android:id="@+id/checkB_vsdSupport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/checkBox"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/btnGroup_fragmentProductEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/layoutGroup_productData_edit"
+        >
+        <include android:id="@+id/btnGroup_ProductEdit"
+            layout="@layout/btn_group_edit"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <include android:id="@+id/btnGroup_productAdd"
+            layout="@layout/btn_group_add"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+<!--    _______________to delete________________________-->
+    <LinearLayout android:id="@+id/btnGroup_productEdit_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/layoutGroup_productData_edit"
+        android:visibility="gone"
+        >
+        <Button android:id="@+id/btnOk_productsEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_label_ok"
+            style="@style/button"
+            />
+        <Button android:id="@+id/btnCancel_productsEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_label_cancel"
+            style="@style/button"
+            />
+    </LinearLayout>
+</RelativeLayout>

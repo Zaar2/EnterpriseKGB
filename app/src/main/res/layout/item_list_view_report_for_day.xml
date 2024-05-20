@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="100"
+    android:layout_marginTop="5dp"
+    android:clickable="false"
+    android:background="?android:attr/selectableItemBackground"
+    >
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:text="@string/tvLabel_label_product"
+        style="@style/label_subItem_myListView_report"
+        android:gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:text="@string/tvLabel_label_count"
+        style="@style/label_subItem_myListView_report"
+        android:gravity="end"
+        />
+    <TextView
+        android:id="@+id/tv_me"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:text=""
+        style="@style/label_subItem_myListView_report"
+        android:gravity="start"
+        android:maxLines="1"
+        />
+    <TextView
+        android:id="@+id/tv_timeProduce"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="15"
+        android:text="@string/tvLabel_label_time_produce"
+        style="@style/label_subItem_myListView_report"
+        android:gravity="center_horizontal"
+        />
+</LinearLayout>

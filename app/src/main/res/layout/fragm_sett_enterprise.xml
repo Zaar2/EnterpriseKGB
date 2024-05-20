@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".view.fragments.setting.EnterpriseSetting_fragment"
+    android:gravity="center"
+    >
+    <LinearLayout android:id="@+id/layoutGroup_enterpriseData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout android:id="@+id/layout_struct_idEnterprise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_label"
+                android:text="@string/tv_label_idEnterprise"
+                />
+            <TextView android:id="@+id/tv_idEnterprise"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_value"
+                android:textIsSelectable="true"
+                />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout_struct_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_label"
+                android:text="@string/tv_label_nameEnterprise"
+                />
+            <TextView android:id="@+id/tv_nameEnterprise"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_value"
+                android:textIsSelectable="true"
+                />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout_struct_innEnterprise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_label"
+                android:text="@string/tv_label_innEnterprise"
+                />
+            <TextView android:id="@+id/tv_innEnterprise"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_value"
+                android:textIsSelectable="true"
+                />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout_struct_emailEnterprise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_label"
+                android:text="@string/tv_label_emailEnterprise"
+                />
+            <TextView android:id="@+id/tv_emailEnterprise"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_value"
+                android:textIsSelectable="true"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/dtnGroup_enterprise_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layoutGroup_enterpriseData"
+        android:gravity="center"
+        >
+        <Button android:id="@+id/btn_enterprise_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/button"
+            android:text="@string/btn_label_edit"
+            />
+        <Button android:id="@+id/btn_enterprise_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/button"
+            android:text="@string/btn_label_back"
+            />
+    </LinearLayout>
+</RelativeLayout>

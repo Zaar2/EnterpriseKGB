@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:context=".view.fragments.identification.IdentificationStart_fragment"
+    android:layout_gravity="center"
+    >
+    <Button android:id="@+id/btn_start_newEnterprise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_label_start_new_enterprise"
+        style="@style/button"
+        android:minHeight="0dp"
+        />
+    <Button android:id="@+id/btn_start_entryEnterprise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_label_start_entryEnterprise"
+        style="@style/button"
+        android:minHeight="0dp"
+        />
+    <TextView android:id="@+id/tv_description_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textView_smallText"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        />
+</LinearLayout>

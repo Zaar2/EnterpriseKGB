@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="100"
+    android:layout_marginTop="5dp"
+    android:clickable="false"
+    android:background="?android:attr/selectableItemBackground"
+    >
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="58"
+        android:text="@string/tvLabel_label_product"
+        style="@style/label_subItem_myListView_report"
+        android:gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="17"
+        android:text="@string/tvLabel_label_count"
+        style="@style/label_subItem_myListView_report"
+        android:gravity="end|center_vertical"
+        />
+    <TextView
+        android:id="@+id/tv_me"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:text=""
+        style="@style/label_subItem_myListView_report"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        />
+    <TextView
+        android:id="@+id/tv_countOfBathes"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="15"
+        android:text="@string/tvLabel_label_countOfBatches"
+        style="@style/label_subItem_myListView_report"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        />
+    <TextView android:id="@+id/tv_countOfDays"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="15"
+        android:text="@string/tvLabel_label_countOfDays"
+        style="@style/label_subItem_myListView_report"
+        android:gravity="center_horizontal"
+        android:visibility="visible"
+        />
+</LinearLayout>

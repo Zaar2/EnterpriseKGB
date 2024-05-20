@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting_nav_host_graph"
+    app:startDestination="@id/setting_fragment"
+    >
+    <fragment
+        android:id="@+id/setting_fragment"
+        android:name="com.zaar.meatkgb2_m.view.fragments.setting.Setting_fragment"
+        android:label="fragm_setting"
+        tools:layout="@layout/fragm_setting" >
+        <action
+            android:id="@+id/action_setting_fragment_to_productsSetting_fragment"
+            app:destination="@id/productsSetting_fragment" />
+        <action
+            android:id="@+id/action_setting_fragment_to_workersSetting_fragment"
+            app:destination="@id/workersSetting_fragment" />
+        <action
+            android:id="@+id/action_setting_fragment_to_structureSetting_fragment"
+            app:destination="@id/structureSetting_fragment" />
+        <action
+            android:id="@+id/action_setting_fragment_to_identificationUser_Activity"
+            app:destination="@id/identificationUser_Activity" />
+        <action
+            android:id="@+id/action_setting_fragment_to_mainActivity2"
+            app:destination="@id/mainActivity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsSetting_fragment"
+        android:name="com.zaar.meatkgb2_m.view.fragments.setting.ProductsSetting_fragment"
+        android:label="fragm_sett_products"
+        tools:layout="@layout/fragm_sett_products" >
+        <action
+            android:id="@+id/action_productsSetting_fragment_to_setting_fragment"
+            app:destination="@id/setting_fragment" />
+        <action
+            android:id="@+id/action_productsSetting_fragment_to_editProducts_fragment"
+            app:destination="@id/editProducts_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopsSetting_fragment"
+        android:name="com.zaar.meatkgb2_m.view.fragments.setting.ShopsSetting_fragment"
+        android:label="fragm_sett_shops"
+        tools:layout="@layout/fragm_sett_shops" >
+        <action
+            android:id="@+id/action_shopsSetting_fragment_to_structureSetting_fragment"
+            app:destination="@id/structureSetting_fragment" />
+        <action
+            android:id="@+id/action_shopsSetting_fragment_to_editShops_fragment"
+            app:destination="@id/editShops_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/structureSetting_fragment"
+        android:name="com.zaar.meatkgb2_m.view.fragments.setting.StructureSetting_fragment"
+        android:label="fragm_sett_structure"
+        tools:layout="@layout/fragm_sett_structure" >
+        <action
+            android:id="@+id/action_structureSetting_fragment_to_setting_fragment"
+            app:destination="@id/setting_fragment" />
+        <action
+            android:id="@+id/action_structureSetting_fragment_to_shopsSetting_fragment"
+            app:destination="@id/shopsSetting_fragment" />
+        <action
+            android:id="@+id/action_structureSetting_fragment_to_enterpriseSetting_fragment"
+            app:destination="@id/enterpriseSetting_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workersSetting_fragment"
+        android:name="com.zaar.meatkgb2_m.view.fragments.setting.WorkersSetting_fragment"
+        android:label="fragm_sett_workers"
+        tools:layout="@layout/fragm_sett_workers" >
+        <action
+            android:id="@+id/action_workersSetting_fragment_to_setting_fragment"
+            app:destination="@id/setting_fragment" />
+        <action
+            android:id="@+id/action_workersSetting_fragment_to_editWorkers_fragment"
+            app:destination="@id/editWorkers_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProducts_fragment"
+        android:name="com.zaar.meatkgb2_m.view.fragments.setting.EditProducts_fragment"
+        android:label="fragm_sett_products_edit"
+        tools:layout="@layout/fragm_sett_products_edit" >
+        <action
+            android:id="@+id/action_editProducts_fragment_to_productsSetting_fragment"
+            app:destination="@id/productsSetting_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editWorkers_fragment"
+        android:name="com.zaar.meatkgb2_m.view.fragments.setting.EditWorkers_fragment"
+        android:label="fragm_sett_workers_edit"
+        tools:layout="@layout/fragm_sett_workers_edit" >
+        <action
+            android:id="@+id/action_editWorkers_fragment_to_workersSetting_fragment"
+            app:destination="@id/workersSetting_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editShops_fragment"
+        android:name="com.zaar.meatkgb2_m.view.fragments.setting.EditShops_fragment"
+        android:label="fragm_sett_shops_edit"
+        tools:layout="@layout/fragm_sett_shops_edit" >
+        <action
+            android:id="@+id/action_editShops_fragment_to_shopsSetting_fragment"
+            app:destination="@id/shopsSetting_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterpriseSetting_fragment"
+        android:name="com.zaar.meatkgb2_m.view.fragments.setting.EnterpriseSetting_fragment"
+        android:label="fragm_sett_enterprise"
+        tools:layout="@layout/fragm_sett_enterprise" >
+        <action
+            android:id="@+id/action_enterpriseSetting_fragment_to_structureSetting_fragment"
+            app:destination="@id/structureSetting_fragment" />
+        <action
+            android:id="@+id/action_enterpriseSetting_fragment_to_editEnterprise_fragment"
+            app:destination="@id/editEnterprise_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editEnterprise_fragment"
+        android:name="com.zaar.meatkgb2_m.view.fragments.setting.EditEnterprise_fragment"
+        android:label="EditEnterprise_fragment" >
+        <action
+            android:id="@+id/action_editEnterprise_fragment_to_enterpriseSetting_fragment"
+            app:destination="@id/enterpriseSetting_fragment" />
+    </fragment>
+    <activity
+        android:id="@+id/identificationUser_Activity"
+        android:name="com.zaar.meatkgb2_m.view.activity.IdentificationUser_Activity"
+        android:label="activity_identification_user"
+        tools:layout="@layout/activity_identification_user" />
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.zaar.meatkgb2_m.view.activity.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>

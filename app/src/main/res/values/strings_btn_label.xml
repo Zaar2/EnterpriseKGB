@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_btn_item_list_view" translatable="false">btn_item_list_view</string>
+
+    <string name="btn_label_structure">structure</string>
+    <string name="btn_label_shops">shops</string>
+    <string name="btn_label_enterprise">enterprise</string>
+    <string name="btn_label_workers">workers</string>
+    <string name="btn_label_products">products</string>
+    <string name="btn_label_reset_login">reset login</string>
+    <string name="btn_label_edit">edit</string>
+    <string name="btn_label_back">back</string>
+    <string name="btn_label_reset">reset</string>
+    <string name="btn_label_ok">@android:string/ok</string>
+    <string name="btn_label_cancel"> @android:string/cancel</string>
+    <string name="btn_label_add">add</string>
+    <string name="btn_label_del">del</string>
+    <string name="btn_label_goOn">go on</string>
+    <string name="btn_label_updating">upd.</string>
+    <string name="btn_label_to_register">to register</string>
+    <string name="btn_label_new">new</string>
+    <string name="btn_label_generate">generate</string>
+    <string name="btn_label_start_new_enterprise">new enterprise</string>
+    <string name="btn_label_start_entryEnterprise">entry existing enterprise</string>
+    <string name="btn_label_restoring_access">Restoring access</string>
+    <string name="btn_label_inactive">inactive</string>
+
+    <string name="btn_label_save_to_serv">save to server</string>
+    <string name="btn_label_getReport_forPeriod">for period</string>
+    <string name="btn_label_getReport_forDay">for day</string>
+    <string name="btn_label_search">produced by day</string>
+
+
+    <string name="label_progressBar_activityShops">Receiving and processing data from the server</string>
+
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.setting.ShopsSetting_fragment"
+    android:gravity="center"
+    >
+    <TextView android:id="@+id/nameFragment_products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_label_structure_fragment"
+        style="@style/textView_heading"
+        android:textAllCaps="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        />
+    <Button android:id="@+id/btn_inactive_shops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/button_small"
+        android:minHeight="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/layout_recView_struct"
+        android:text="@string/btn_label_inactive"
+        android:visibility="invisible"
+        />
+    <LinearLayout android:id="@+id/layout_recView_struct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/nameFragment_products"
+        android:layout_above="@+id/btnGroup"
+        android:gravity="center"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recView_structure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_rec_view_one_tv_setting"
+            android:orientation="vertical"
+            />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/btnGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        >
+        <Button android:id="@+id/btnAdd_shops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_label_add"
+            style="@style/button"
+            />
+        <Button android:id="@+id/btnBack_shops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_label_back"
+            style="@style/button"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

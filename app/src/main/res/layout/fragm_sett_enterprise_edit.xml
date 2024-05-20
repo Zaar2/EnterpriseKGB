@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".view.fragments.setting.EditEnterprise_fragment"
+    android:gravity="center"
+    android:layout_centerInParent="true"
+    >
+    <LinearLayout android:id="@+id/layoutGroup_enterpriseData_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout android:id="@+id/layout_struct_idEnterprise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_label"
+                android:text="@string/tv_label_idEnterprise"
+                />
+            <Button android:id="@+id/btn_enterprise_generateId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="0dp"
+                android:layout_weight="25"
+                style="@style/button_small"
+                android:text="@string/btn_label_generate"
+                android:visibility="gone"
+                />
+            <TextView android:id="@+id/tv_idEnterprise"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_value"
+                android:textIsSelectable="true"
+                />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout_struct_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_label"
+                android:text="@string/tv_label_nameEnterprise"
+                />
+            <EditText android:id="@+id/et_nameEnterprise"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_value"
+                android:maxLines="1"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout_struct_innEnterprise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_label"
+                android:text="@string/tv_label_innEnterprise"
+                />
+            <EditText android:id="@+id/et_innEnterprise"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_value"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionNext"
+                />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout_struct_emailEnterprise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_label"
+                android:text="@string/tv_label_emailEnterprise"
+                />
+            <EditText android:id="@+id/et_emailEnterprise"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                style="@style/textView_value"
+                android:maxLines="1"
+                android:inputType="textEmailSubject"
+                android:imeOptions="actionNext"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/layout_struct_btnGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/layoutGroup_enterpriseData_edit"
+        >
+        <include android:id="@+id/btnGroup_enterpriseEdit"
+            layout="@layout/btn_group_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <include android:id="@+id/btnGroup_enterpriseAdd"
+            layout="@layout/btn_group_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <include android:id="@+id/btnGroup_enterpriseInfo"
+            layout="@layout/btn_group_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    <TextView android:id="@+id/tv_addEnterprise_explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_struct_btnGroup"
+        style="@style/textView_smallText"
+        android:text="@string/tvMessage_addEnterprise_save_variables"
+        android:visibility="invisible"
+        />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_addEnterprise_explanation"
+        >
+    <TextView android:id="@+id/tv_addEnterprise_description_process"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/textView_smallText"
+        android:visibility="visible"
+        />
+    </ScrollView>
+</RelativeLayout>

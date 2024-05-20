@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="idEnterprise" translatable="false">ru54e00001</string>
+    <string name="nameEnterprise" translatable="false">ООО Эльторг</string>
+    <string name="innEnterprise" translatable="false">540000141</string>
+</resources>

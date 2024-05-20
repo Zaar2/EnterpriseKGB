@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <TextView android:id="@+id/tv_reportSupportVSD_title"
+        style="@style/subItem_mainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_vsd"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        />
+
+    <ImageButton android:id="@+id/imageButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:scaleType="fitXY"
+        android:src="@drawable/uploading"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_reportSupportVSD_title"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo"
+        />
+
+    <LinearLayout android:id="@+id/linLayout_firstDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/linLayout_lastDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_reportSupportVSD_title">
+
+        <TextView
+            android:id="@+id/tv_firstDate_label"
+            style="@style/textView_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/tvLabel_firstDate"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_firstDate_value"
+            style="@style/textView_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/tvLabel_current_date"
+            android:visibility="visible"
+            android:background="?android:attr/selectableItemBackground"
+            />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/linLayout_lastDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linLayout_firstDate"
+        app:layout_constraintTop_toTopOf="@+id/linLayout_firstDate">
+
+        <TextView
+            android:id="@+id/tv_lastDate_label"
+            style="@style/textView_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/tvLabel_lastDate"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_lastDate_value"
+            style="@style/textView_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvLabel_current_date"
+            android:visibility="visible"
+            android:background="?android:attr/selectableItemBackground"
+            />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/layout_sum_indicators"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintTop_toBottomOf="@+id/linLayout_firstDate">
+
+        <TextView
+            android:id="@+id/tv_label1_numRecords"
+            style="@style/textView_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvLabel_num_records_viewing" />
+
+        <TextView
+            android:id="@+id/tv_value1_numRecords"
+            style="@style/textView_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_______" />
+
+        <LinearLayout android:id="@+id/layout_numIsChecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvLabel_view_VSD_isDone"
+                style="@style/textView_label"
+                android:paddingStart="30dp"
+                android:paddingEnd="10dp"
+                />
+            <TextView android:id="@+id/value2_numIsChecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textView_value"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include android:id="@+id/progressBar_PreVSD"
+        layout="@layout/layout_progress_bar_retrieving_records"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/layout_sum_indicators"
+        app:layout_constraintBottom_toTopOf="@+id/layout_buttons_bottomOfActivityVSD"
+        />
+
+    <include android:id="@+id/layout_report_shop"
+        layout="@layout/layout_records_view_vsd"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/layout_sum_indicators"
+        app:layout_constraintBottom_toTopOf="@+id/layout_buttons_bottomOfActivityVSD"
+        />
+
+    <LinearLayout android:id="@+id/layout_buttons_bottomOfActivityVSD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <Button
+            android:id="@+id/btn_save_to_server"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_label_save_to_serv"
+            android:visibility="visible"
+            />
+
+        <Button
+            android:id="@+id/btn_getReportFor_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_padding_top"
+            android:text="@string/btn_label_getReport_forDay"
+            android:visibility="visible"
+            style="@style/button"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

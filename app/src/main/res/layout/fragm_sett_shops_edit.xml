@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".view.fragments.setting.EditShops_fragment"
+    android:gravity="center"
+    >
+    <RelativeLayout android:id="@+id/layout_inactiveShop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/size_padding_top"
+        android:paddingHorizontal="@dimen/size_padding_horizontal_fragment"
+        android:visibility="invisible"
+        >
+        <TextView android:id="@+id/tvLabel_inactiveShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textView_smallText"
+            android:text="@string/tv_label_record_is_inactive"
+            android:layout_toStartOf="@+id/checkB_inactiveShop"
+            android:layout_alignTop="@+id/checkB_inactiveShop"
+            />
+        <CheckBox android:id="@+id/checkB_inactiveShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/checkBox"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
+    <EditText android:id="@+id/et_nameShop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/textView_value"
+        android:hint="@string/hint_name_shop"
+        android:maxLines="1"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/margin_editText_structEdit"
+        android:layout_marginEnd="@dimen/margin_editText_structEdit"
+        />
+    <EditText android:id="@+id/et_shortNameShop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/textView_value"
+        android:hint="@string/hint_short_name_shop"
+        android:maxLines="1"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/margin_editText_structEdit"
+        android:layout_marginEnd="@dimen/margin_editText_structEdit"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="true"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textView_label"
+            android:text="@string/tv_label_type"
+            />
+        <Spinner android:id="@+id/spinner_typeOfShop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@style/spinner"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            style="@style/textView_label"
+            android:text="@string/tv_label_non_manufacture"
+            />
+        <CheckBox android:id="@+id/checkB_nonManufacture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/checkBox"
+            />
+    </LinearLayout>
+    <include android:id="@+id/btnGroup_shopEdit"
+        layout="@layout/btn_group_edit"
+        android:visibility="visible"
+        />
+    <include android:id="@+id/btnGroup_shopAdd"
+        layout="@layout/btn_group_add"
+        android:visibility="visible"
+        />
+    <TextView android:id="@+id/tv_alertMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_layout_alert"
+        android:layout_marginEnd="@dimen/margin_layout_alert"
+        style="@style/textView_alertMessage"
+        />
+</LinearLayout>

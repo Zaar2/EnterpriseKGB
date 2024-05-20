@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="_______" translatable="false">___</string>
+
+    <string name="_type_listView" translatable="false">type_listView</string>
+    <string name="_type_shop" translatable="false">type_shop</string>
+    <string name="_inputValExtras" translatable="false">inputValExtras</string>
+    <string name="_activity_main" translatable="false">main</string>
+    <string name="_setting" translatable="false">setting</string>
+    <string name="_activity_VSD" translatable="false">VSD</string>
+    <string name="_activity_shops" translatable="false">shops</string>
+    <string name="_activity_search" translatable="false">search</string>
+
+    <string name="_source" translatable="false">source</string>
+    <string name="_action" translatable="false">action</string>
+    <string name="_actionPrevious" translatable="false">actionPrev</string>
+    <string name="_position" translatable="false">position</string>
+    <string name="_currentShop" translatable="false">currentShop</string>
+
+    <string name="_add" translatable="false">add</string>
+    <string name="_addEnterprise" translatable="false">addEnterprise</string>
+    <string name="_adduser" translatable="false">addUser</string>
+    <string name="_addShop" translatable="false">addShop</string>
+    <string name="_addProduct" translatable="false">addProduct</string>
+    <string name="_cancelAdd" translatable="false">cancelAdd</string>
+    <string name="_cancelAddUser" translatable="false">cancelAddUser</string>
+    <string name="_cancelAddEnterprise" translatable="false">cancelAddEnterprise</string>
+
+    <string name="_edit" translatable="false">edit</string>
+    <string name="_upd" translatable="false">upd</string>
+    <string name="_updProduct" translatable="false">updProduct</string>
+    <string name="_cancelUpd" translatable="false">cancelUpd</string>
+
+    <string name="_del" translatable="false">del</string>
+
+
+    <string name="_usrLogin" translatable="false">usrLogin</string>
+    <string name="_usrPass" translatable="false">usrPass</string>
+    <string name="_back" translatable="false">back</string>
+
+    <string name="_nameShop" translatable="false">nameShop</string>
+    <string name="_nameProduct" translatable="false">product_name</string>
+    <string name="_identification" translatable="false">identification</string>
+    <string name="_fragment_main" translatable="false">fragment_main</string>
+    <string name="_workerSetting" translatable="false">workersSetting</string>
+
+    <string name="_idEnterprise" translatable="false">idEnterprise</string>
+    <string name="_new_enterprise" translatable="false">new_enterprise</string>
+    <string name="_exists_enterprise" translatable="false">exists_enterprise</string>
+
+    <string name="_periodReportShop" translatable="false">periodReportShop</string>
+    <string name="_firstDate" translatable="false">firstDate</string>
+    <string name="_lastDate" translatable="false">lastDate</string>
+    <string name="_countDays" translatable="false">countDays</string>
+
+    <string name="todo" translatable="false">TODO</string>
+</resources>

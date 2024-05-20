@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.setting.Setting_fragment"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nameActivity_setting"
+            style="@style/textView_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_setting"
+            android:textAllCaps="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_products"
+            style="@style/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_label_products" />
+
+        <Button
+            android:id="@+id/btn_workers"
+            style="@style/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_label_workers" />
+
+        <Button
+            android:id="@+id/btn_structure"
+            style="@style/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_label_structure" />
+
+        <Button
+            android:id="@+id/btn_setting_backToMain"
+            style="@style/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_label_back" />
+    </LinearLayout>
+    <Button android:id="@+id/btn_resetLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/button"
+        android:text="@string/btn_label_reset_login"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dayReport">day</string>
+    <string name="periodReport">period</string>
+    <string-array name="arrShopReports">
+        <item>@string/dayReport</item>
+        <item>@string/periodReport</item>
+    </string-array>
+</resources>

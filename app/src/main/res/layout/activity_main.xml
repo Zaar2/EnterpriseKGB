@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.MainActivity"
+    android:gravity="clip_horizontal"
+    android:background="@drawable/background"
+    >
+    <RelativeLayout android:id="@+id/layout_mainHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/background_btn_group"
+        >
+        <ImageView android:id="@+id/img_logo_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"
+            android:scaleType="fitStart"
+            android:layout_alignBottom="@id/btn_setting"
+            android:layout_marginStart="@dimen/margin_imgLogo"
+            android:visibility="gone"
+            />
+        <TextView android:id="@+id/tv_enterpriseName_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/btn_setting"
+            android:text="DEFAULT"
+            android:layout_marginEnd="@dimen/margin_editText_structEdit"
+            style="@style/textView_label"
+            android:layout_alignBaseline="@id/btn_setting"
+            />
+        <TextView android:id="@+id/tv_userMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="default"
+            style="@style/textView_value"
+            android:layout_marginEnd="@dimen/margin_listView"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btn_setting"
+            />
+        <Button android:id="@+id/btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_setting"
+            style="@style/button"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recView_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/group_btn_bottom"
+        android:layout_below="@id/layout_mainHeading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/margin_recViewMain"
+        android:layout_marginTop="@dimen/margin_recViewMain"
+        android:layout_marginEnd="@dimen/margin_recViewMain"
+        android:layout_marginBottom="@dimen/margin_recViewMain"
+        android:scrollbars="none"
+        tools:listitem="@layout/item_rec_v_button_main" />
+
+    <LinearLayout
+        android:id="@+id/group_btn_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_btn_group"
+        >
+        <Button
+            android:id="@+id/btn_vsd"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_vsd"
+            />
+        <Button
+            android:id="@+id/btn_search"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/label_search"
+            />
+    </LinearLayout>
+</RelativeLayout>

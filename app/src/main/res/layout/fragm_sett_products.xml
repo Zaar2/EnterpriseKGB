@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.setting.ProductsSetting_fragment"
+    android:gravity="top"
+    >
+    <RelativeLayout android:id="@+id/layout_sumText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        >
+        <TextView android:id="@+id/tvLabel_countItems_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_label_count_product"
+            style="@style/textView_label"
+            android:layout_alignParentStart="true"
+            />
+        <TextView android:id="@+id/tv_countItems_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textView_value"
+            android:layout_toRightOf="@+id/tvLabel_countItems_product"
+            />
+
+        <Button android:id="@+id/btn_inactive_products"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/button_small"
+            android:minHeight="0dp"
+            android:layout_alignParentEnd="true"
+            android:text="@string/btn_label_inactive"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+    <Button android:id="@+id/btn_allProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="все"
+        style="@style/button"
+        android:layout_below="@+id/layout_sumText"
+        />
+    <RelativeLayout android:id="@+id/layout_recView_products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/btn_allProducts"
+        android:layout_above="@+id/btnGroup_productFragment"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recView_productsShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_rec_v_button_main"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/recView_productsShop"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recView_products"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_rec_view_one_tv_setting"
+                android:orientation="vertical"
+            />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout android:id="@+id/btnGroup_productFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        >
+        <Button android:id="@+id/btnAdd_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_label_add"
+            style="@style/button"
+            android:visibility="visible"
+            />
+        <Button android:id="@+id/btnBack_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_label_back"
+            style="@style/button"
+            />
+    </LinearLayout>
+</RelativeLayout>
